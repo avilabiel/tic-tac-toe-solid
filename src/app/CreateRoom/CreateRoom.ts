@@ -4,10 +4,10 @@ import GameRoom, { IGameRoom } from "../../entities/GameRoom";
 
 export default async ({
   username,
-  roomRepository,
+  gameRoomRepository,
 }: {
   username: string;
-  roomRepository: IGameRoom;
+  gameRoomRepository: IGameRoom;
 }): Promise<string> => {
   const player = new Player({ username });
 
@@ -16,8 +16,7 @@ export default async ({
 
   const gameRoom = new GameRoom({ code, player1: player });
 
-  // TODO: call repository to save in memory
-  await roomRepository.create(gameRoom);
+  await gameRoomRepository.create(gameRoom);
 
   return code;
 };

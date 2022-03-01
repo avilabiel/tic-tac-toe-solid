@@ -13,4 +13,7 @@ export default class GameRoom {
 
 export interface IGameRoom {
   create(gameRoom: GameRoom): Promise<void>;
+  getByCode(gameRoomCode: string): Promise<GameRoom>;
+  update(gameRoom: GameRoom): Promise<void>;
+  deleteAll(): Promise<void>;
 }
