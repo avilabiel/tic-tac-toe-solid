@@ -13,8 +13,6 @@ export default async ({
 }): Promise<void> => {
   const persistedRoom = await gameRoomRepository.getByCode(gameRoomCode);
 
-  console.log("Persisted Room ===========", persistedRoom);
-
   if (persistedRoom.player1 && persistedRoom.player2) {
     throw new Error("Room already has two players joined");
   }
