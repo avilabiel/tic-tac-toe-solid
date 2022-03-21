@@ -1,6 +1,5 @@
 import Player from "../../entities/Player";
-import GameRoom, { IGameRoom } from "../../entities/GameRoom";
-import { triggerAsyncId } from "async_hooks";
+import { IGameRoom } from "../../entities/GameRoom";
 
 export default async ({
   username,
